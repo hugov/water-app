@@ -1,0 +1,24 @@
+<h1>Lista de Categoria</h1>
+
+<button pButton type="button" label="Adicionar Categoria"  ></button>
+
+<p-table [value]="categoria">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>ID</th>
+            <th>Descrição</th>
+            <th>Situação</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-categoria>
+        <tr>
+            <td>{{categoria.id}}</td>
+            <td>{{categoria.descricao}}</td>
+            <td>{{categoria.situacao}}</td>
+            <td><button pButton type="button" label="Alterar" (onClick)="alterar()" ></button></td>
+            <td><button pButton type="button" label="Excluir" ></button></td>
+        </tr>
+    </ng-template>
+</p-table>
