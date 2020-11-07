@@ -1,14 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { CategoriaComponent } from './categoria/categoria.component';
+
+import { HomeComponent } from './core/home/home.component';
+import { ItemSearchComponent } from './item/item-search/item-search.component';
+import { ItemCreateAndEditComponent } from './item/item-create-and-edit/item-create-and-edit.component';
+import { CategoriaSearchComponent } from './categoria/categoria-search/categoria-search.component';
+import { CategoriaCreateAndEditComponent } from './categoria/categoria-create-and-edit/categoria-create-and-edit.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
-  {path: 'categoria', component: CategoriaComponent}
-];
+  { path: '', component: HomeComponent},
+  { path: 'itens', component: ItemSearchComponent},
+  { path: 'itens/novo', component: ItemCreateAndEditComponent},
+  { path: 'itens/:idItem', component: ItemCreateAndEditComponent},
 
+  { path: 'categorias', component: CategoriaSearchComponent},
+  { path: 'categorias/novo', component: CategoriaCreateAndEditComponent},
+  { path: 'categorias/:categoriaId', component: CategoriaCreateAndEditComponent}
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

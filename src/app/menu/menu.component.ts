@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import {MenuItem} from 'primeng/api';
-import { CategoriaComponent } from './../categoria/categoria.component';
 
 @Component({
   selector: 'app-menu',
@@ -11,10 +10,8 @@ import { CategoriaComponent } from './../categoria/categoria.component';
 export class MenuComponent implements OnInit {
 
   items: MenuItem[];
-  categoria: CategoriaComponent;
 
   constructor() { 
-      this.categoria = new CategoriaComponent();
   }
 
   ngOnInit(): void {
@@ -33,10 +30,10 @@ export class MenuComponent implements OnInit {
             icon: 'pi pi-fw pi-pencil',
             items: [
                 {
-                    label: 'Categoria', 
-                    routerLink: 'categoria'
+                    label: 'Categoria', routerLink: 'categorias'
                 },
-                {label: 'Produto'}
+                {label: 'Produto'},
+                {label: 'Item' , routerLink: 'itens'}
             ]
         },
         {

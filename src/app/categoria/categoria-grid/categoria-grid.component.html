@@ -1,0 +1,33 @@
+<div class="card">
+    <p-table [value]="categorias" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" 
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Id</th>
+                <th>Descrição</th>
+                <th>Situação</th>
+                <th></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-categoria>
+            <tr>
+                <td>{{categoria.id}}</td>
+                <td>{{categoria.descricao}}</td>
+                <td>{{categoria.situacao.value == 1 ? 'Ativo' : 'Inativo'}}</td>
+                <td class="col-content-btns">
+                    <p-button class="btn-editar" icon="pi pi-pencil" pTooltip="Editar" [routerLink]="['/categorias', categoria.id]" tooltipPosition="bottom"></p-button>
+                    <p-button icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="bottom" (onClick)="handleDelete(categoria)"></p-button>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+            <p-button type="button" styleClass="p-button-text"></p-button>
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+            <p-button type="button" styleClass="p-button-text"></p-button>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            Nenhum registro encontrado.
+        </ng-template>
+    </p-table>
+</div>
