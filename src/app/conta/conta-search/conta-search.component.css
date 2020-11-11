@@ -1,0 +1,15 @@
+h1 {
+    margin-top: 0;
+}
+
+.mr-0 {
+    margin-right: 0;
+}
+
+.ml-auto {
+    margin-left:auto;
+}
+
+.d-block {
+    display:block;
+}

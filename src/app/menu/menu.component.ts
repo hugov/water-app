@@ -37,6 +37,15 @@ export class MenuComponent implements OnInit {
             ]
         },
         {
+            label: 'Admin',
+            icon: 'pi pi-fw pi-pencil',
+            items: [
+                {
+                    label: 'Conta', routerLink: 'contas'
+                }
+            ]
+        },
+        {
             label: 'Relatórios',
             icon: 'pi pi-chart-bar',
             items: [

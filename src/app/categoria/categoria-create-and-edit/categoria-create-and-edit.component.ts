@@ -16,7 +16,6 @@ export class CategoriaCreateAndEditComponent implements OnInit {
   situacao: SelectItem[];
   categoriaForm: FormGroup;
   categoriaId: number;
-  categoria: Categoria;
 
   constructor(
     private fb: FormBuilder,

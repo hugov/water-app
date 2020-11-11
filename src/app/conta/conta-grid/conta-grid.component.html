@@ -1,0 +1,39 @@
+<div class="card">
+    <p-table [value]="contas" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" 
+        currentPageReportTemplate="Exibindo {first} para {last} de {totalRecords} registros" [rowsPerPageOptions]="[10,25,50]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>CPF/CNPJ</th>
+                <th>Telefone</th>
+                <th>E-mail</th>
+                <th>Situação</th>
+                <th></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-conta>
+            <tr>
+                <td>{{conta.id}}</td>
+                <td>{{conta.nome}}</td>
+                <td>{{conta.cpfCnpj}}</td>
+                <td>{{conta.telefone}}</td>
+                <td>{{conta.email}}</td>
+                <td>{{conta.situacao.value == 1 ? 'Ativo' : 'Inativo'}}</td>
+                <td class="col-content-btns">
+                    <p-button class="btn-editar" icon="pi pi-pencil" pTooltip="Editar" [routerLink]="['/contas', conta.id]" tooltipPosition="bottom"></p-button>
+                    <p-button icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="bottom" (onClick)="handleDelete(conta)"></p-button>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+            <p-button type="button" styleClass="p-button-text"></p-button>
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+            <p-button type="button" styleClass="p-button-text"></p-button>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            Nenhum registro encontrado.
+        </ng-template>
+    </p-table>
+</div>

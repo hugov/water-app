@@ -1,5 +1,33 @@
 07/11/2020
 
+<<Home >>
+- Configurar 3 cards por linha
+- Configurar níveis de aviso/alerta
+- Configurar cores
+
+<<Cadastro de categorai>>
 - Implementar cadastro de categoria
 - Após salvar redirecionar para a tela de grid
 - Traduzir para o portguês o resultado da Grid
+- Revisar a implementação do component de search da categoria
+
+<<Cadastro de conta>>
+- Implementar o cadastro de conta
+- Eliminar o uso excessivo de <br>
+- Na página de contas deve registrar os pagamentos mensais
+- E-mail de confirmção de criação de conta
+
+<<Cadastro de produto>>
+- Implementar o cadastro de produto
+
+<<Cadastro de cliente>>
+- Implementar o cadastro de cliente
+
+<<Cadastro de entregadores>>
+- Implementar o cadastro de entregadores
+
+<<Cadastro de perfil>>
+- Implementar o cadastro de perfil
+
+<<Cadastro de funcionalidade>>
+- Implementar o cadastro de funcionalidade

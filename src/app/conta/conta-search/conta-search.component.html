@@ -1,0 +1,22 @@
+<div class="container">
+    <p-confirmDialog [style]="{width: '425px'}"></p-confirmDialog>
+    <p-toast [style]="{marginTop: '50px'}"></p-toast>
+    <div class="ui-g">
+        <div class="ui-g-12 ui-fluid">
+            <h2>Cadastro de Contas</h2>
+        </div>
+    </div>
+
+    <div class="ui-g">
+        <div class="ui-g-12">
+            <button pButton type="button" label="Nova conta" routerLink="/contas/novo" class="d-block mr-0 ml-auto" pTooltip="Incluir" ></button>
+            <br>
+        </div>
+    </div>
+
+    <div class="ui-g">
+        <div class="ui-g-12">
+            <app-conta-grid (delete)="dialogDelete($event)" [contas]="contas"></app-conta-grid>
+        </div>
+    </div>
+</div>

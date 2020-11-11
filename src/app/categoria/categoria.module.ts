@@ -12,6 +12,7 @@ import {ToastModule} from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { InputTextModule } from 'primeng/inputtext';
+import {InputMaskModule} from 'primeng/inputmask';
 import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
@@ -38,6 +39,7 @@ import { CategoriaService } from './categoria.service';
     ButtonModule,
     DropdownModule,
     InputTextModule,
+    InputMaskModule,
     ConfirmDialogModule,
     FormsModule,
     ReactiveFormsModule,

@@ -1,0 +1,122 @@
+<div class="p-fluid p-grid">
+
+    <p-toast [style]="{marginTop: '50px'}"></p-toast>
+    <form autocomplete="false" [formGroup]="contaForm" (ngSubmit)="onSubmit(contaForm.value)">
+                
+        <h1>Cadastro de Conta</h1>
+
+        <span class="p-float-label">
+
+            <p-dropdown [options]="tipoPessoa" formControlName="tipoPessoa"></p-dropdown>
+            <p-message severity="error" text="Tipo de pessoa é obrigatória" *ngIf="!contaForm.controls['situacao'].valid&&contaForm.controls['situacao'].dirty"></p-message>
+
+        </span>
+
+        <br>
+
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="nomeRazaoSocial" maxlength="50" pattern="[a-zA-Z-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]*"/>
+            <label for="float-input">Nome/Razão Social</label>
+            
+            <p-message severity="error" [text]="contaForm.controls['nomeRazaoSocial'].errors['required'] ? ' Descrição é obrigatório' : contaForm.controls['nomeRazaoSocial'].errors['pattern'] ? 'Só é permitido letras para esse campo' : ''"
+                *ngIf="!contaForm.controls['nomeRazaoSocial'].valid&&contaForm.controls['nomeRazaoSocial'].dirty"></p-message>
+        </span>
+
+        <br>
+
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="cpfCnpj" maxlength="50" pattern="[a-zA-Z-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]*"/>
+            <label for="float-input">CPF/CNPJ</label>
+            
+            <p-message severity="error" [text]="contaForm.controls['cpfCnpj'].errors['required'] ? ' CPF/CNPJ é obrigatório' : contaForm.controls['cpfCnpj'].errors['pattern'] ? 'Só é permitido letras para esse campo' : ''"
+                *ngIf="!contaForm.controls['cpfCnpj'].valid&&contaForm.controls['cpfCnpj'].dirty"></p-message>
+        </span>
+
+        <br>
+
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="logradouro" maxlength="50" pattern="[a-zA-Z-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]*"/>
+            <label for="float-input">Logradouro</label>
+            
+            <p-message severity="error" [text]="contaForm.controls['logradouro'].errors['required'] ? ' Logradouro é obrigatório' : contaForm.controls['logradouro'].errors['pattern'] ? 'Só é permitido letras para esse campo' : ''"
+                *ngIf="!contaForm.controls['logradouro'].valid&&contaForm.controls['logradouro'].dirty"></p-message>
+        </span>
+
+        <br>
+
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="numero" maxlength="50" pattern="[a-zA-Z-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9 ]*"/>
+            <label for="float-input">Número</label>
+            
+            <p-message severity="error" [text]="contaForm.controls['numero'].errors['required'] ? ' Número é obrigatório' : contaForm.controls['numero'].errors['pattern'] ? 'Só é permitido letras para esse campo' : ''"
+                *ngIf="!contaForm.controls['numero'].valid&&contaForm.controls['numero'].dirty"></p-message>
+        </span>
+
+        <br>
+
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="cidade" maxlength="50" pattern="[a-zA-Z-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]*"/>
+            <label for="float-input">Cidade</label>
+            
+            <p-message severity="error" [text]="contaForm.controls['cidade'].errors['required'] ? ' Cidade é obrigatório' : contaForm.controls['cidade'].errors['pattern'] ? 'Só é permitido letras para esse campo' : ''"
+                *ngIf="!contaForm.controls['cidade'].valid&&contaForm.controls['cidade'].dirty"></p-message>
+        </span>
+
+        <br>
+
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="estado" maxlength="50" pattern="[a-zA-Z-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]*"/>
+            <label for="float-input">Estado</label>
+            
+            <p-message severity="error" [text]="contaForm.controls['estado'].errors['required'] ? ' Estado é obrigatório' : contaForm.controls['estado'].errors['pattern'] ? 'Só é permitido letras para esse campo' : ''"
+                *ngIf="!contaForm.controls['estado'].valid&&contaForm.controls['estado'].dirty"></p-message>
+        </span>
+
+        <br>
+
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="complemento" maxlength="50" pattern="[a-zA-Z-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]*"/>
+            <label for="float-input">Complemento</label>
+            
+            <p-message severity="error" [text]="contaForm.controls['complemento'].errors['required'] ? ' Complemento é obrigatório' : contaForm.controls['complemento'].errors['pattern'] ? 'Só é permitido letras para esse campo' : ''"
+                *ngIf="!contaForm.controls['complemento'].valid&&contaForm.controls['complemento'].dirty"></p-message>
+        </span>
+
+        <br>
+
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="telefone" maxlength="50" pattern="[a-zA-Z-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]*"/>
+            <label for="float-input">Telefone</label>
+            
+            <p-message severity="error" [text]="contaForm.controls['telefone'].errors['required'] ? ' Telefone é obrigatório' : contaForm.controls['telefone'].errors['pattern'] ? 'Só é permitido letras para esse campo' : ''"
+                *ngIf="!contaForm.controls['telefone'].valid&&contaForm.controls['telefone'].dirty"></p-message>
+        </span>
+
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="dataCadastro" maxlength="10" pattern="[0-9/]*"/>
+            <label for="float-input">Data de cadastro</label>
+        </span>
+
+        <br>
+
+        <span class="p-float-label">
+
+            <p-dropdown [options]="situacao" formControlName="situacao"></p-dropdown>
+            <p-message severity="error" text="Situação é obrigatória" *ngIf="!contaForm.controls['situacao'].valid&&contaForm.controls['situacao'].dirty"></p-message>
+
+        </span>
+
+        <br>
+
+        <button pButton type="submit" style="margin-right: 10px" [disabled]="formInvalid()" label="Salvar" class="ui-button-info"></button>
+        
+        <p></p>
+
+        <button pButton type="button" routerLink="/contas" label="Cancelar" class="ui-button-secondary"></button>
+
+    </form>
+</div>

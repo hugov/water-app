@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { ItemModule } from './item/item.module';
 import { MenuComponent } from './menu/menu.component';
 import { CategoriaModule } from './categoria/categoria.module';
+import { ContaModule } from './conta/conta.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CategoriaModule } from './categoria/categoria.module';
     CoreModule,
     ItemModule,
     CategoriaModule,
+    ContaModule,
     MenubarModule
   ],
   providers: [],
