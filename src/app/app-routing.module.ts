@@ -8,6 +8,8 @@ import { CategoriaSearchComponent } from './categoria/categoria-search/categoria
 import { CategoriaCreateAndEditComponent } from './categoria/categoria-create-and-edit/categoria-create-and-edit.component';
 import { ContaSearchComponent } from './conta/conta-search/conta-search.component';
 import { ContaCreateAndEditComponent } from './conta/conta-create-and-edit/conta-create-and-edit.component';
+import { ProdutoSearchComponent } from './produto/produto-search/produto-search.component';
+import { ProdutoCreateAndEditComponent } from './produto/produto-create-and-edit/produto-create-and-edit.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -21,7 +23,11 @@ const routes: Routes = [
 
   { path: 'contas', component: ContaSearchComponent},
   { path: 'contas/novo', component: ContaCreateAndEditComponent},
-  { path: 'contas/:contaId', component: ContaCreateAndEditComponent}
+  { path: 'contas/:contaId', component: ContaCreateAndEditComponent},
+
+  { path: 'produtos', component: ProdutoSearchComponent},
+  { path: 'produtos/novo', component: ProdutoCreateAndEditComponent},
+  { path: 'produtos/:produtoId', component: ProdutoCreateAndEditComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
