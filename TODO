@@ -5,11 +5,16 @@
 - Configurar níveis de aviso/alerta
 - Configurar cores
 
+<< Outros >>
+- Padronizar a chamada de todos os cadastro com o serviço em REST
+
 <<Cadastro de categorai>>
 - Implementar cadastro de categoria
 - Após salvar redirecionar para a tela de grid
 - Traduzir para o portguês o resultado da Grid
 - Revisar a implementação do component de search da categoria
+- Implementar o serviço em Rest
+- Implementar a chamada ao serviço em REST
 
 <<Cadastro de conta>>
 - Implementar o cadastro de conta

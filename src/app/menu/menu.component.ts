@@ -21,7 +21,7 @@ export class MenuComponent implements OnInit {
             label: 'Controle de Acesso',
             icon: 'pi pi-fw pi-users',
             items: [
-                {label: 'Usuário'},
+                {label: 'Usuário', routerLink: 'usuarios'},
                 {label: 'Permissão de acesso'}
             ]
         },
@@ -29,13 +29,11 @@ export class MenuComponent implements OnInit {
             label: 'Cadastros e Parâmetros',
             icon: 'pi pi-fw pi-pencil',
             items: [
-                {
-                    label: 'Categoria', routerLink: 'categorias'
-                },
+                {label: 'Categoria', routerLink: 'categorias'},
                 {label: 'Produto', routerLink: 'produtos'},
                 {label: 'Cliente', routerLink: 'clientes'},
                 {label: 'Entregador', routerLink: 'entregadores'},
-                {label: 'Item' , routerLink: 'itens'}
+                {label: 'Pedido', routerLink: 'pedidos'}
             ]
         },
         {
@@ -51,8 +49,8 @@ export class MenuComponent implements OnInit {
             label: 'Relatórios',
             icon: 'pi pi-chart-bar',
             items: [
-                {label: 'Delete'},
-                {label: 'Refresh'}
+                {label: 'Pedidos realizados'},
+                {label: 'Listagem de produtos'}
             ]
         }
     ];

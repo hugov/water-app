@@ -14,6 +14,10 @@ import { ClienteSearchComponent } from './cliente/cliente-search/cliente-search.
 import { ClienteCreateAndEditComponent } from './cliente/cliente-create-and-edit/cliente-create-and-edit.component';
 import { EntregadorSearchComponent } from './entregador/entregador-search/entregador-search.component';
 import { EntregadorCreateAndEditComponent } from './entregador/entregador-create-and-edit/entregador-create-and-edit.component';
+import { UsuarioSearchComponent } from './usuario/usuario-search/usuario-search.component';
+import { UsuarioCreateAndEditComponent } from './usuario/usuario-create-and-edit/usuario-create-and-edit.component';
+import { PedidoSearchComponent } from './pedido/pedido-search/pedido-search.component';
+import { PedidoCreateAndEditComponent } from './pedido/pedido-create-and-edit/pedido-create-and-edit.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -39,7 +43,15 @@ const routes: Routes = [
 
   { path: 'entregadores', component: EntregadorSearchComponent},
   { path: 'entregadores/novo', component: EntregadorCreateAndEditComponent},
-  { path: 'entregadores/:entregadorId', component: EntregadorCreateAndEditComponent}
+  { path: 'entregadores/:entregadorId', component: EntregadorCreateAndEditComponent},
+
+  { path: 'usuarios', component: UsuarioSearchComponent},
+  { path: 'usuarios/novo', component: UsuarioCreateAndEditComponent},
+  { path: 'usuarios/:entregadorId', component: UsuarioCreateAndEditComponent},
+
+  { path: 'pedidos', component: PedidoSearchComponent},
+  { path: 'pedidos/novo', component: PedidoCreateAndEditComponent},
+  { path: 'pedidos/:entregadorId', component: PedidoCreateAndEditComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
