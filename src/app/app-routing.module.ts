@@ -12,6 +12,8 @@ import { ProdutoSearchComponent } from './produto/produto-search/produto-search.
 import { ProdutoCreateAndEditComponent } from './produto/produto-create-and-edit/produto-create-and-edit.component';
 import { ClienteSearchComponent } from './cliente/cliente-search/cliente-search.component';
 import { ClienteCreateAndEditComponent } from './cliente/cliente-create-and-edit/cliente-create-and-edit.component';
+import { EntregadorSearchComponent } from './entregador/entregador-search/entregador-search.component';
+import { EntregadorCreateAndEditComponent } from './entregador/entregador-create-and-edit/entregador-create-and-edit.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -33,7 +35,11 @@ const routes: Routes = [
 
   { path: 'clientes', component: ClienteSearchComponent},
   { path: 'clientes/novo', component: ClienteCreateAndEditComponent},
-  { path: 'clientes/:clienteId', component: ClienteCreateAndEditComponent}
+  { path: 'clientes/:clienteId', component: ClienteCreateAndEditComponent},
+
+  { path: 'entregadores', component: EntregadorSearchComponent},
+  { path: 'entregadores/novo', component: EntregadorCreateAndEditComponent},
+  { path: 'entregadores/:entregadorId', component: EntregadorCreateAndEditComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

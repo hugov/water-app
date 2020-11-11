@@ -13,6 +13,7 @@ import { CategoriaModule } from './categoria/categoria.module';
 import { ContaModule } from './conta/conta.module';
 import { ProdutoModule } from './produto/produto.module';
 import { ClienteModule } from './cliente/cliente.module';
+import { EntregadorModule } from './entregador/entregador.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ClienteModule } from './cliente/cliente.module';
     ContaModule,
     ProdutoModule,
     ClienteModule,
+    EntregadorModule,
     MenubarModule
   ],
   providers: [],
