@@ -10,6 +10,8 @@ import { ContaSearchComponent } from './conta/conta-search/conta-search.componen
 import { ContaCreateAndEditComponent } from './conta/conta-create-and-edit/conta-create-and-edit.component';
 import { ProdutoSearchComponent } from './produto/produto-search/produto-search.component';
 import { ProdutoCreateAndEditComponent } from './produto/produto-create-and-edit/produto-create-and-edit.component';
+import { ClienteSearchComponent } from './cliente/cliente-search/cliente-search.component';
+import { ClienteCreateAndEditComponent } from './cliente/cliente-create-and-edit/cliente-create-and-edit.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -27,7 +29,11 @@ const routes: Routes = [
 
   { path: 'produtos', component: ProdutoSearchComponent},
   { path: 'produtos/novo', component: ProdutoCreateAndEditComponent},
-  { path: 'produtos/:produtoId', component: ProdutoCreateAndEditComponent}
+  { path: 'produtos/:produtoId', component: ProdutoCreateAndEditComponent},
+
+  { path: 'clientes', component: ClienteSearchComponent},
+  { path: 'clientes/novo', component: ClienteCreateAndEditComponent},
+  { path: 'clientes/:clienteId', component: ClienteCreateAndEditComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

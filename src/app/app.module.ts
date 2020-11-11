@@ -11,6 +11,8 @@ import { ItemModule } from './item/item.module';
 import { MenuComponent } from './menu/menu.component';
 import { CategoriaModule } from './categoria/categoria.module';
 import { ContaModule } from './conta/conta.module';
+import { ProdutoModule } from './produto/produto.module';
+import { ClienteModule } from './cliente/cliente.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { ContaModule } from './conta/conta.module';
     ItemModule,
     CategoriaModule,
     ContaModule,
+    ProdutoModule,
+    ClienteModule,
     MenubarModule
   ],
   providers: [],
